@@ -330,7 +330,7 @@ const Header = () => {
                     <div className="header-container">
                         <div className="logo">
                             <a href="/">
-                                <img src="../../src/assets/me.jpg" alt="" />
+                                <img src="https://drive.google.com/file/d/1A6LT0RaVK7PNWl6mdXBnKN2qXZ5j5qoK/preview" alt="" />
                             </a>
                         </div>
                         
