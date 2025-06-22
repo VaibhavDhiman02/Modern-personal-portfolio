@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Header.css';
-import me from "../../src/assets/me.jpg"
+import "../../src/assets/me.jpg";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -330,7 +330,7 @@ const Header = () => {
                     <div className="header-container">
                         <div className="logo">
                             <a href="/">
-                                <img src="me" alt="" />
+                                <img src="../../src/assets/me.jpg" alt="" />
                             </a>
                         </div>
                         
