@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light theme variables */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-blur: blur(10px);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --menu-bg: rgba(255, 255, 255, 0.98);
+  --menu-text: #000000;
+  --menu-glow: rgba(0, 0, 0, 0.1);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] {
+  /* Dark theme variables */
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --header-bg: rgba(0, 0, 0, 0.8);
+  --header-blur: blur(10px);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --menu-bg: rgba(28, 28, 35, 0.98);
+  --menu-text: #ffffff;
+  --menu-glow: rgba(100, 220, 255, 0.15);
+  --hover-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+

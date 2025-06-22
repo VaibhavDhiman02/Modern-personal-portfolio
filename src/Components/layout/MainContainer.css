@@ -1,0 +1,33 @@
+.main-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero {
+    margin: 0;
+    padding: 0;
+    height: calc(100% - 80px);
+}
+
+/* Cursor following blob */
+.cursor-blob {
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle at center, #ea8884, #418de3);
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.5;
+    pointer-events: none; 
+    z-index: 0;
+    will-change: transform, border-radius, opacity, background;
+    transition: background 0.8s ease;
+}
+
+@media (max-width: 768px) {
+    .cursor-blob {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* @font-face {
+  font-family: 'zavie';
+  src: url('/public/ZANIE-BROVIA.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+::selection {
+  background: #000000;
+  color: #000;
+}
+
+:root {
+  /* Light Theme */
+  --background: #ffffff;
+  --text-color: #333333;
+  --menu-bg: rgba(245, 245, 245, 0.98);
+  --menu-text: #333333;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --menu-glow: rgba(0, 0, 0, 0.1);
+  /* --border-ligth: #000000; */
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+  --background: #000000;
+  --text-color: #ffffff;
+  --menu-bg: rgba(28, 28, 35, 0.98);
+  --menu-text: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --hover-bg: rgba(255, 255, 255, 0.05);
+  --menu-glow: rgba(100, 220, 255, 0.1);
+  /* --border-ligth: #ffffff; */
+}
+
+html {
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+body {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}

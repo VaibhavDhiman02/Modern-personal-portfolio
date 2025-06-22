@@ -1,0 +1,320 @@
+/* Modern Projects Section Styles */
+.projects-section {
+    padding: 6rem 2rem;
+    background-color: var(--background);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .projects-heading-container {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+  
+  .projects-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .projects-title-underline {
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, #a855f7, #06b6d4);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: rgba(var(--background-rgb, 255, 255, 255), 0.03);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    height: auto; /* Ensure height is determined by content */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-image-container {
+    position: relative;
+    height: 220px; /* Fixed height for the image container */
+    overflow: hidden;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* Allow content to expand */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Keep the rest of your gradient hover effects */
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 2px; /* Thickness of the gradient border */
+    background: linear-gradient(
+      45deg,
+      #ff3366,
+      #a855f7,
+      #06b6d4,
+      #3b82f6
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+  }
+  
+  .project-card:hover::before {
+    opacity: 1;
+  }
+  
+  .project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .project-card:hover .project-image-container img {
+    transform: scale(1.05);
+  }
+  
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+  
+  /* Add a gradient effect to the image on hover */
+  .project-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 51, 102, 0.3), rgba(168, 85, 247, 0.3), rgba(6, 182, 212, 0.3), rgba(59, 130, 246, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+  }
+  
+  .project-card:hover .project-image-container::after {
+    opacity: 1;
+  }
+  
+  /* Ensure links appear above the gradient */
+  .project-links {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .project-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  
+  .project-card:hover .project-link {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .project-card:hover .project-link:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .project-card:hover .project-link:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .project-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: linear-gradient(135deg, #a855f7, #06b6d4);
+    color: white;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .project-description {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .tech-tag {
+    padding: 0.35rem 0.75rem;
+    background: rgba(var(--background-rgb, 255, 255, 255), 0.06);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .projects-section {
+      padding: 4rem 1.5rem;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
+    
+    .projects-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .projects-section {
+      padding: 3rem 1rem;
+    }
+    
+    .project-image-container {
+      height: 180px;
+    }
+    
+    .project-content {
+      padding: 1.25rem;
+    }
+    
+    .project-title {
+      font-size: 1.25rem;
+    }
+  }
+
+/* Remove the gradient effect from the image */
+.project-image-container::after {
+  content: none; /* Remove the gradient overlay on the image */
+}
+
+/* Keep the original overlay for links */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Keep the gradient border on the card */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  padding: 2px; /* Thickness of the gradient border */
+  background: linear-gradient(
+    45deg,
+    #ff3366,
+    #a855f7,
+    #06b6d4,
+    #3b82f6
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Let's Connect Section */
+.lets-connect-main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+  }
+  
+  .connect-inner-container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, transparent, var(--text-color), transparent) 1;
+  }
+  
+  .connect-inner-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  .connect-inner-container a:hover {
+    transform: translateY(-5px);
+  }
+  
+  .connect-inner-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .connect-inner-container i {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .connect-inner-container a:hover i {
+    transform: rotate(-45deg);
+  }
+  
+  /* Add a subtle animation on hover */
+  .connect-inner-container::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff3366, #a855f7, #06b6d4, #3b82f6);
+    transition: width 0.4s ease;
+  }
+  
+  .connect-inner-container:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsive styles for Let's Connect section */
+  @media (max-width: 768px) {
+    .lets-connect-main-container {
+      padding: 4rem 1.5rem;
+    }
+    
+    .connect-inner-container {
+      max-width: 300px;
+    }
+    
+    .connect-inner-container p {
+      font-size: 2rem;
+    }
+    
+    .connect-inner-container i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lets-connect-main-container {
+      padding: 3rem 1rem;
+    }
+    
+    .connect-inner-container {
+      max-width: 250px;
+      padding-bottom: 1rem;
+    }
+    
+    .connect-inner-container p {
+      font-size: 1.75rem;
+    }
+    
+    .connect-inner-container i {
+      font-size: 1.25rem;
+    }
+  }
