@@ -349,28 +349,19 @@ const Hero = () => {
             <div className="first-exp">
               <h1>2021</h1>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
-                iusto voluptatibus quos, dicta eos nisi, quis fuga ad sed quidem
-                voluptas aperiam delectus tempora pariatur cumque doloremque
-                harum quasi accusamus.
+              I started freelancing in 2021 to earn some side income as I began my college journey. I initially stepped into the world of graphic design, which later sparked my interest in UI/UX design using Figma. As time went on, I naturally transitioned into web development since it aligned with my college curriculum and personal interests.
               </p>
             </div>
             <div className="second-exp">
               <h1>2024</h1>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
-                iusto voluptatibus quos, dicta eos nisi, quis fuga ad sed quidem
-                voluptas aperiam delectus tempora pariatur cumque doloremque
-                harum quasi accusamus.
+              In 2024, during my final year of college, I started looking for meaningful internship opportunities where I could apply my skills and grow professionally. In November, I received my first offer as a Web Developer and UI/UX Designer at Knoqlogico IT Solutions. This role allowed me to work on live projects, collaborate with a professional team, and gain hands-on experience in both design and development.
               </p>
             </div>
             <div className="first-exp">
               <h1>2025</h1>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
-                iusto voluptatibus quos, dicta eos nisi, quis fuga ad sed quidem
-                voluptas aperiam delectus tempora pariatur cumque doloremque
-                harum quasi accusamus.
+              Now, in 2025, I'm working full-time at Knoqlogico IT Solutions. The journey so far has been full of learning and growth, and I'm continuously exploring new skills and experiences to keep improving both personally and professionally.
               </p>
             </div>
           </div>
